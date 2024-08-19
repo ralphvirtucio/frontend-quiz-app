@@ -71,5 +71,40 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.tg-display {
+  font-weight: 500;
+  font-size: 9rem;
+}
+
+.tg-heading-l-bold {
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+.tg-heading-l-reg {
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+.tg-heading-m {
+  font-weight: 500;
+  font-size: 2.25rem;
+}
+
+.tg-heading-s {
+  font-weight: 500;
+  font-size: 1.75rem;
+}
+
+.tg-body-m {
+  font-size: 0.75rem;
+  line-height: 24px;
+}
+
+.tg-body-reg-it {
+  font-size: 0.75rem;
+  font-style: italic;
+  line-height: 24px;
+}
 
 /*# sourceMappingURL=style.css.map */
