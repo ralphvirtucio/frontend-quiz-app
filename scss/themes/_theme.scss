@@ -5,5 +5,8 @@ body {
   background-color: $light-grey;
   background-image: url('/assets/images/pattern-background-mobile-light.svg');
   background-repeat: no-repeat;
-  background-position: top left 20%;
+
+  @include respond-to('small') {
+    background-image: url('/assets/images/pattern-background-tablet-light.svg');
+  }
 }

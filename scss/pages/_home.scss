@@ -10,6 +10,7 @@ body {
 .start-menu {
   margin-block-start: 2rem;
   width: 90%;
+  max-width: 40rem;
   margin-block-end: 15rem;
 
   .welcome-section {
@@ -19,8 +20,15 @@ body {
       color: $dark-navy;
       font-weight: 500;
       margin-block-end: 1rem;
+
+      @include respond-to('small') {
+        font-size: $fs-heading-l;
+      }
+
       span {
-        font-weight: 300;  
+        font-weight: 300;
+
+       
       }
     }
 
@@ -28,6 +36,10 @@ body {
       font-style: italic;
       color: $grey-navy;
       font-size: 0.875rem;
+
+      @include respond-to('small') {
+          font-size: 1.25rem;
+      }
     }
     
   }

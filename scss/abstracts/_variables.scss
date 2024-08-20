@@ -20,3 +20,21 @@ $clr-accessibility: #F6E7FF;
 // Typography
 
 $ff-main: "Rubik", sans-serif;
+$fs-display: 9rem;
+$fs-heading-l: 4rem;
+$fs-heading-m: 2.25rem;
+$fs-heading-s: 1.75rem;
+$fs-body-m: 0.75rem;
+
+$fw-bold: 700;
+$fw-medium: 500;
+
+$lh-medium: 1.25rem;
+
+// Breakpoints
+
+$breakpoints: (
+  'small': (min-width: 48em),
+  'medium': (min-width: 64em),
+  'large': (min-width: 90em),
+)

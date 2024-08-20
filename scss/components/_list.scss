@@ -7,9 +7,14 @@
   margin: 0;
   gap: 0.75rem;
 
+  @media screen and (min-width: 768px) {
+    gap: 1.5rem;
+  }
+
   li {
     background-color: $pure-white;
     border-radius: 24px;
     padding-block: .75rem;
+    box-shadow: 0 16px 40px rgba($color: #8FA0C1, $alpha: 0.14);
   }
 }
