@@ -1,0 +1,39 @@
+@use '../abstracts' as *;
+
+
+.btn {
+  border: none;
+  background-color: transparent;
+
+  &__subject {
+    color: $dark-navy;
+    font-size: 1.125rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__theme-toggle {
+    background-color: $purple;
+    width: 48px;
+    height: max-content;
+    border-radius: 2rem;
+    display: flex;
+    padding: 4px;
+
+    &::before {
+      content: '';
+      width: 1.25rem;
+      height: 1.25rem;
+      display: inline-block;
+      background-color: $pure-white;
+      border-radius: 50%;
+    }
+
+    span {
+      @include sr-only
+    }
+  }
+
+}

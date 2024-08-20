@@ -1,0 +1,9 @@
+@use '../abstracts' as *;
+
+
+body {
+  background-color: $light-grey;
+  background-image: url('/assets/images/pattern-background-mobile-light.svg');
+  background-repeat: no-repeat;
+  background-position: top left 20%;
+}
