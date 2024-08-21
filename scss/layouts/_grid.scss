@@ -1,3 +1,4 @@
+@use '../abstracts' as *;
 
 
 .grid {
@@ -5,6 +6,9 @@
   row-gap: 2.5rem;
   
   &.col-2 {
-
+    
+    @include respond-to('medium') {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }

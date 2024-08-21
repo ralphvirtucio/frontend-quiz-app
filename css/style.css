@@ -192,12 +192,25 @@ body {
   display: grid;
   place-items: center;
 }
+@media (min-width: 64em) {
+  body {
+    grid-auto-rows: 10rem auto;
+  }
+}
 
 .start-menu {
   margin-block-start: 2rem;
   width: 90%;
   max-width: 40rem;
   margin-block-end: 15rem;
+}
+@media (min-width: 64em) {
+  .start-menu {
+    width: 100%;
+    max-width: 80rem;
+    padding-inline: 2rem;
+    margin-block-end: 8rem;
+  }
 }
 .start-menu .welcome-section h1 {
   line-height: 1.2;
@@ -209,6 +222,11 @@ body {
 @media (min-width: 48em) {
   .start-menu .welcome-section h1 {
     font-size: 4rem;
+  }
+}
+@media (min-width: 64em) {
+  .start-menu .welcome-section h1 {
+    margin-block-end: 3rem;
   }
 }
 .start-menu .welcome-section h1 span {
@@ -245,10 +263,27 @@ body {
   display: grid;
   row-gap: 2.5rem;
 }
+@media (min-width: 64em) {
+  .grid.col-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .header {
   justify-self: end;
   padding-block: 1.625rem;
   padding-inline-end: 1.5rem;
+}
+@media (min-width: 64em) {
+  .header {
+    width: 100%;
+    max-width: 22rem;
+  }
+}
+@media (min-width: 90em) {
+  .header {
+    max-width: 17rem;
+  }
 }
 .header button {
   line-height: 0;
@@ -275,6 +310,7 @@ body {
   background-color: #F4F6FA;
   background-image: url("/assets/images/pattern-background-mobile-light.svg");
   background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 @media (min-width: 48em) {
   body {

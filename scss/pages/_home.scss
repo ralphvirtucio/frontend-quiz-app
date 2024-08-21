@@ -5,6 +5,10 @@ body {
   font-family: $ff-main;
   display: grid;
   place-items: center;
+
+  @include respond-to('medium') {
+    grid-auto-rows: 10rem auto;
+  }
 }
 
 .start-menu {
@@ -13,7 +17,16 @@ body {
   max-width: 40rem;
   margin-block-end: 15rem;
 
+  @include respond-to('medium') {
+   width: 100%;
+   max-width: 80rem;
+   padding-inline: 2rem;
+   margin-block-end: 8rem;
+
+  }
+
   .welcome-section {
+
     h1 {
       line-height: 1.2;
       font-size: 2.5rem;
@@ -24,6 +37,13 @@ body {
       @include respond-to('small') {
         font-size: $fs-heading-l;
       }
+
+
+      @include respond-to('medium') {
+        margin-block-end: 3rem;
+      }
+
+
 
       span {
         font-weight: 300;

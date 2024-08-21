@@ -5,7 +5,14 @@
   padding-block: 1.625rem;
   padding-inline-end: 1.5rem;
   // width: 90%;
-  // max-width: 30rem;
+  // max-width: 20rem;
+  @include respond-to('medium') {
+    width: 100%;
+    max-width: 22rem;
+   }
+  @include respond-to('large') {
+    max-width: 17rem;
+   }
 
   button {
     line-height: 0;
