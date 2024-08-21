@@ -1,22 +1,2 @@
 @use '../abstracts' as *;
 
-.icon {
-  &__container {
-    padding: 6px;
-    border-radius: 12px;
-    line-height: 0;
-  }
-
-  &__html {
-    background-color: $clr-html;
-  }
-  &__css {
-    background-color: $clr-css;
-  }
-  &__javascript {
-    background-color: $clr-javascript;
-  }
-  &__accessibility {
-    background-color: $clr-accessibility;
-  }
-}

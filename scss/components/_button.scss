@@ -1,43 +1,20 @@
 @use '../abstracts' as *;
 
+// Button reset styles
 button {
   border: none;
   background-color: transparent;
 }
 
+
 .btn {
-  border: none;
-  background-color: transparent;
 
   &__subject {
-    color: $dark-navy;
-    font-size: 1.125rem;
-    font-weight: 500;
     display: flex;
     align-items: center;
     gap: 1rem;
-
-    @include respond-to('small') {
-      font-size: 1.75rem;
-    }
+    color: $dark-navy;
+    font-weight: 500;
+    font-size: 1.125rem;
   }
-
- 
-
-  &__theme-toggle {
-    background-color: $purple;
-    width: 48px;
-    height: max-content;
-    border-radius: 2rem;
-    display: flex;
-    padding: 4px;
-
- 
-
-
-    span {
-      @include sr-only
-    }
-  }
-
 }

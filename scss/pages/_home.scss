@@ -2,74 +2,7 @@
 
 
 body {
+  background-color: $light-grey;
+  background: url('/assets/images/pattern-background-mobile-light.svg') 100% no-repeat;
   font-family: $ff-main;
-  display: grid;
-  place-items: center;
-
-  @include respond-to('medium') {
-    grid-auto-rows: 10rem auto;
-  }
-}
-
-.start-menu {
-  margin-block-start: 2rem;
-  width: 90%;
-  max-width: 40rem;
-  margin-block-end: 15rem;
-
-  @include respond-to('medium') {
-   width: 100%;
-   max-width: 80rem;
-   padding-inline: 2rem;
-   margin-block-end: 8rem;
-
-  }
-
-  .welcome-section {
-
-    h1 {
-      line-height: 1.2;
-      font-size: 2.5rem;
-      color: $dark-navy;
-      font-weight: 500;
-      margin-block-end: 1rem;
-
-      @include respond-to('small') {
-        font-size: $fs-heading-l;
-      }
-
-
-      @include respond-to('medium') {
-        margin-block-end: 3rem;
-      }
-
-
-
-      span {
-        font-weight: 300;
-
-       
-      }
-    }
-
-    .instruction-text {
-      font-style: italic;
-      color: $grey-navy;
-      font-size: 0.875rem;
-
-      @include respond-to('small') {
-          font-size: 1.25rem;
-      }
-    }
-    
-  }
-}
-
-.theme {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  span {
-    line-height: 0;
-  }
 }

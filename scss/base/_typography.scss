@@ -1,37 +1,21 @@
+@use '../abstracts' as *;
 
+.heading {
+  &__main {
+    color: $dark-navy;
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.2;
 
-.tg-display {
-  font-weight: 500;
-  font-size: 9rem;
+    strong {
+      font-weight: 500;
+    }
+  }
 }
 
-.tg-heading-l-bold {
-  font-weight: 700;
-  font-size: 4rem;
-}
-
-.tg-heading-l-reg {
-  font-weight: 400;
-  font-size: 4rem;
-}
-
-.tg-heading-m {
-  font-weight: 500;
-  font-size: 2.25rem;
-}
-
-.tg-heading-s {
-  font-weight: 500;
-  font-size: 1.75rem;
-}
-
-.tg-body-m {
-  font-size: 0.75rem;
-  line-height: 24px;
-}
-
-.tg-body-reg-it {
-  font-size: 0.75rem;
+.quiz-instruction {
   font-style: italic;
-  line-height: 24px;
+  color: $grey-navy;
+  font-size: 0.875rem;
+  margin-block-start: 1rem;
 }
