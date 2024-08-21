@@ -3,6 +3,21 @@
 
 body {
   background-color: $light-grey;
-  background: url('/assets/images/pattern-background-mobile-light.svg') 100% no-repeat;
+  background-image: url('/assets/images/pattern-background-mobile-light.svg');
+  background-repeat: no-repeat;
   font-family: $ff-main;
+
+
+  @include respond-to("small") {
+    background-image: url('/assets/images/pattern-background-tablet-light.svg');
+  }
+
+  
+  @include respond-to("medium") {
+    background-image: url('/assets/images/pattern-background-desktop-light.svg');
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 15rem 18rem;
+  }
 }

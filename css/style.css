@@ -73,9 +73,9 @@ select {
 }
 .heading__main {
   color: #313E51;
-  font-size: 2.5rem;
   font-weight: 300;
   line-height: 1.2;
+  font-size: clamp(2.5rem, 5vw, 4rem);
 }
 .heading__main strong {
   font-weight: 500;
@@ -84,7 +84,7 @@ select {
 .quiz-instruction {
   font-style: italic;
   color: #626C7F;
-  font-size: 0.875rem;
+  font-size: clamp(0.875rem, 3vw, 1.25rem);
   margin-block-start: 1rem;
 }
 
@@ -131,21 +131,81 @@ button {
   gap: 1rem;
   color: #313E51;
   font-weight: 500;
-  font-size: 1.125rem;
+  font-size: clamp(1.125rem, 3vw, 1.25rem);
+}
+.btn__theme-switcher {
+  background-color: #A729F5;
+  width: 48px;
+  height: auto;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn__theme-switcher span {
+  background-color: #FFF;
+  display: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+.btn__theme-switcher span.active {
+  display: inline-block;
 }
 
 body {
   background-color: #F4F6FA;
-  background: url("/assets/images/pattern-background-mobile-light.svg") 100% no-repeat;
+  background-image: url("/assets/images/pattern-background-mobile-light.svg");
+  background-repeat: no-repeat;
   font-family: "Rubik", sans-serif;
+}
+@media (min-width: 48em) {
+  body {
+    background-image: url("/assets/images/pattern-background-tablet-light.svg");
+  }
+}
+@media (min-width: 64em) {
+  body {
+    background-image: url("/assets/images/pattern-background-desktop-light.svg");
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 15rem 18rem;
+  }
 }
 
 .header__main {
   margin-block-end: 3.5rem;
+  padding-inline: 1.5rem;
+  padding-block: 1.625rem;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (min-width: 48em) {
+  .header__main {
+    padding-inline: 4rem;
+  }
+}
+@media (min-width: 64em) {
+  .header__main {
+    max-width: 80rem;
+    width: 100%;
+    padding-inline: 2rem;
+  }
 }
 
 .quiz-menu {
   padding-inline: 1.5rem;
+}
+@media (min-width: 48em) {
+  .quiz-menu {
+    padding-inline: 4rem;
+  }
+}
+@media (min-width: 64em) {
+  .quiz-menu {
+    padding-inline: 2rem;
+  }
 }
 
 .quiz-title {
@@ -155,6 +215,20 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr;
+}
+@media (min-width: 64em) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    max-width: 80rem;
+  }
+}
+
+.flex {
+  display: flex;
+}
+.flex-r-center {
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */

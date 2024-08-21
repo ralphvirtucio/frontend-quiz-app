@@ -2,4 +2,20 @@
 
 .header__main {
   margin-block-end: 3.5rem;
+  padding-inline: 1.5rem;
+  padding-block: 1.625rem;
+  display: flex;
+  justify-content: flex-end;
+
+  @include respond-to('small') {
+    // justify-self: end;
+    padding-inline: 4rem;
+  }
+
+  @include respond-to('medium') {
+    max-width: 80rem;
+    width: 100%;
+    padding-inline: 2rem;
+
+  }
 }
