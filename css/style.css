@@ -125,6 +125,11 @@ select {
   box-shadow: 0 16px 40px rgba(143, 160, 193, 0.14);
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 .btn {
   border: none;
   background-color: transparent;
@@ -149,14 +154,6 @@ select {
   border-radius: 2rem;
   display: flex;
   padding: 4px;
-}
-.btn__theme-toggle::before {
-  content: "";
-  width: 1.25rem;
-  height: 1.25rem;
-  display: inline-block;
-  background-color: #FFF;
-  border-radius: 50%;
 }
 .btn__theme-toggle span {
   border: 0 !important;
@@ -253,6 +250,26 @@ body {
   padding-block: 1.625rem;
   padding-inline-end: 1.5rem;
 }
+.header button {
+  line-height: 0;
+}
+.header [aria-pressed=true]::before {
+  content: "";
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+  background-color: #FFF;
+  border-radius: 50%;
+}
+.header [aria-pressed=false]::before {
+  content: "";
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+  background-color: #FFF;
+  border-radius: 50%;
+  margin-inline-start: 1.125rem;
+}
 
 body {
   background-color: #F4F6FA;
@@ -262,6 +279,11 @@ body {
 @media (min-width: 48em) {
   body {
     background-image: url("/assets/images/pattern-background-tablet-light.svg");
+  }
+}
+@media (min-width: 64em) {
+  body {
+    background-image: url("/assets/images/pattern-background-desktop-light.svg");
   }
 }
 

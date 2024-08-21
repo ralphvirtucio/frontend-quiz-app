@@ -9,4 +9,8 @@ body {
   @include respond-to('small') {
     background-image: url('/assets/images/pattern-background-tablet-light.svg');
   }
+
+  @include respond-to('medium') {
+    background-image: url('/assets/images/pattern-background-desktop-light.svg');
+  }
 }
