@@ -170,7 +170,7 @@ body {
     background-size: cover;
     display: grid;
     place-items: center;
-    grid-template-rows: 15rem 18rem;
+    grid-template-rows: 20rem 18rem;
   }
 }
 
@@ -184,6 +184,7 @@ body {
 @media (min-width: 48em) {
   .header__main {
     padding-inline: 4rem;
+    padding-block-start: 3.375rem;
   }
 }
 @media (min-width: 64em) {

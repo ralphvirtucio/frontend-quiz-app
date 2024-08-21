@@ -8,8 +8,8 @@
   justify-content: flex-end;
 
   @include respond-to('small') {
-    // justify-self: end;
     padding-inline: 4rem;
+    padding-block-start: 3.375rem;
   }
 
   @include respond-to('medium') {
