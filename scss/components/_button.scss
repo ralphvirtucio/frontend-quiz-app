@@ -4,6 +4,7 @@
 button {
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 
@@ -16,7 +17,8 @@ button {
     color: $dark-navy;
     font-weight: 500;
     font-size: clamp(1.125rem, 3vw, 1.25rem);
- 
+    width: 100%;
+    cursor: pointer;
   }
 
   &__theme-switcher {

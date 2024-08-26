@@ -102,6 +102,7 @@ select {
   box-shadow: 0 16px 40px rgba(143, 160, 193, 0.14);
   padding: 0.75rem;
   border-radius: 0.75rem;
+  cursor: pointer;
 }
 .subject .icon {
   padding: 0.375rem;
@@ -123,6 +124,7 @@ select {
 button {
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .btn__subject {
@@ -132,6 +134,8 @@ button {
   color: #313E51;
   font-weight: 500;
   font-size: clamp(1.125rem, 3vw, 1.25rem);
+  width: 100%;
+  cursor: pointer;
 }
 .btn__theme-switcher {
   background-color: #A729F5;
@@ -172,6 +176,38 @@ body {
     place-items: center;
     grid-template-rows: 20rem 18rem;
   }
+}
+
+.question-title {
+  font-size: 0.875rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #626C7F;
+}
+
+.question {
+  font-size: 1.25rem;
+  color: #313E51;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-block-end: 1.5rem;
+}
+
+[role=timer] {
+  width: 100%;
+  background-color: #FFF;
+  height: 16px;
+  border-radius: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+[role=timer] span {
+  background-color: #A729F5;
+  width: 40%;
+  height: 8px;
+  border-radius: 2rem;
+  margin: 4px;
 }
 
 .header__main {
