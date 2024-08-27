@@ -31,15 +31,49 @@
     border-radius: 2rem;
     margin: 4px;
   }
+}
 
-  // &::before {
-  //   content: '';
-  //   background-color: $purple;
-  //   position: absolute;
-  //   width: 96%;
-  //   height: 8px;
-  //   border-radius: 2rem;
-  //   margin: 4px;
-  //   display: inline-block;
-  // }
+
+.form__answer {
+  margin-block-start: 2.5rem;
+}
+
+.answer {
+  background-color: $pure-white;
+  display: flex;
+  padding: .75rem;
+  border-radius: 12px;
+  font-size: 1.125rem;
+  font-weight: $fw-medium;
+
+  &:has(input[type="radio"]:checked) {
+    border: 3px solid $purple;
+  }
+  
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &:has(input[type="radio"]:checked) {
+      background-color: $purple;
+      color: $pure-white;
+    }
+    
+    span {
+      color: $grey-navy;
+      background-color: $light-grey;
+      padding-inline: 0.875rem;
+      padding-block: 0.6875rem;
+      border-radius: 6px;
+      // text-align: center;
+      display: block;
+
+      
+    }
+
+    p {
+      color: $dark-navy;
+    }
+  }
 }

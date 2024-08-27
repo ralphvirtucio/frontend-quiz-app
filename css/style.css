@@ -210,6 +210,42 @@ body {
   margin: 4px;
 }
 
+.form__answer {
+  margin-block-start: 2.5rem;
+}
+
+.answer {
+  background-color: #FFF;
+  display: flex;
+  padding: 0.75rem;
+  border-radius: 12px;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.answer:has(input[type=radio]:checked) {
+  border: 3px solid #A729F5;
+}
+.answer .option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.answer .option:has(input[type=radio]:checked) {
+  background-color: #A729F5;
+  color: #FFF;
+}
+.answer .option span {
+  color: #626C7F;
+  background-color: #F4F6FA;
+  padding-inline: 0.875rem;
+  padding-block: 0.6875rem;
+  border-radius: 6px;
+  display: block;
+}
+.answer .option p {
+  color: #313E51;
+}
+
 .header__main {
   margin-block-end: 3.5rem;
   padding-inline: 1.5rem;
