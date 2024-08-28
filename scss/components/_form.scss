@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+
+.form__control {
+  &--choice {
+    background-color: $pure-white;
+    padding-block: 0.75rem;
+    padding-inline: 0.75rem;
+    border-radius: 12px;
+
+
+    // [type="radio"] {
+    //   display: none;
+    // }
+  }
+}

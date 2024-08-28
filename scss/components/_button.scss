@@ -42,4 +42,16 @@ button {
       }
     }
   }
+
+  &__submit-answer {
+    background-color: $purple;
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.125rem;
+    font-weight: $fw-medium;
+    color: $pure-white;
+    padding-block: 1.25rem;
+    margin-block-start: 0.75rem;
+  }
 }

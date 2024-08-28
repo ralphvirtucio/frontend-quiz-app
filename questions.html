@@ -85,92 +85,54 @@
       </div>
     </header>
 
-    <main class="quiz-menu container">
-      <section>
-        <h1 class="question-title">Question 1 of 10</h1>
+    <main class="quiz-questions container">
+      <section class="question__container">
+        <h2 class="title">Question 1 of 10</h2>
         <p class="question">Which of these color contrast ratios defines the minimum WCAG 2.1 Level AA requirement for normal text?</p>
-        <div role="timer" id="question -timer" aria-label="Question Timer" dataset-time="0">
-          <span></span>
+        <div role="timer" id="questiontimer" aria-labelledby="timer-to-answer" aria-live="off">
+          <span id="timer-to-answer">0</span>
         </div>
       </section>
 
-      <form 
-        class="form__answer"
-        action="get"
-      >
-      <fieldset>
-        <legend>Pick the correct answer</legend>
+      <form class="choices__form">
+        <fieldset>
+            <legend class="sr-only">Select the correct answer</legend>
 
-        <div class="answer">
-          <input type="radio" name="answers" id="option-a">
-          <label for="option-a" class="option">
-            <span>A</span>
-            <p>4.5:1</p>
-          </label>
-        </div>
-      </fieldset>
-
+            <div class="form__control form__control--choice">
+              <input type="radio" id="optiona" name="choice">
+              <label for="optiona" class="answer__container">
+                <span class="letter">A</span>
+                <span class="answer">4.5:1</span>
+              </label>
+            </div>
+            <div class="form__control form__control--choice">
+              <input type="radio" id="optionb" name="choice">
+              <label for="optionb" class="answer__container">
+                <span class="letter">B</span>
+                <span class="answer">3:1</span>
+              </label>
+            </div>
+            <div class="form__control form__control--choice">
+              <input type="radio" id="optionc" name="choice">
+              <label for="optionc" class="answer__container">
+                <span class="letter">C</span>
+                <span class="answer">7:1</span>
+              </label>
+            </div>
+            <div class="form__control form__control--choice">
+              <input type="radio" id="optiond" name="choice">
+              <label for="optiond" class="answer__container">
+                <span class="letter">D</span>
+                <span class="answer">2:1</span>
+              </label>
+            </div>
+        </fieldset>
         
-      </form>
-      <!-- <section
-        class="quiz-title"
-        aria-labelledby="quiz-title">
-        <h1 class="heading__main">Welcome to the <strong>Frontend Quiz!</strong></h1>
-        <p class="quiz-instruction">Pick a subject to get started</p>
-      </section> -->
+        <button type="submit" class="btn btn__submit-answer">
+          Submit Answer
+        </button>
 
-      <!-- <form
-        class="quiz-subjects"
-        aria-label="quiz-subjects"
-        action="questions.html"
-        method="get">
-        <ul class="subjects">
-          <li class="subject">
-            <button
-              class="btn btn__subject"
-              type="submit">
-              <img
-                class="icon icon__html"
-                src="./assets/images/icon-html.svg"
-                alt="" />
-              HTML
-            </button>
-          </li>
-          <li class="subject">
-            <button
-              class="btn btn__subject"
-              type="submit">
-              <img
-                class="icon icon__css"
-                src="./assets/images/icon-css.svg"
-                alt="" />
-              CSS
-            </button>
-          </li>
-          <li class="subject">
-            <button
-              class="btn btn__subject"
-              type="submit">
-              <img
-                class="icon icon__js"
-                src="./assets/images/icon-js.svg"
-                alt="" />
-              Javascript
-            </button>
-          </li>
-          <li class="subject">
-            <button
-              class="btn btn__subject"
-              type="submit">
-              <img
-                class="icon icon__accessibility"
-                src="./assets/images/icon-accessibility.svg"
-                alt="" />
-              Accessibility
-            </button>
-          </li>
-        </ul>
-      </form> -->
+      </form>
     </main>
   </body>
 </html>

@@ -1,79 +1,37 @@
 @use '../abstracts' as *;
 
-.question-title {
-  font-size: 0.875rem;
-  font-style: italic;
-  font-weight: 400;
-  color: $grey-navy;
+.quiz-questions {
+  padding-inline: 1.5rem;
 }
 
-.question {
-  font-size: $fs-body-m;
-  color: $dark-navy;
-  font-weight: $fw-medium;
-  line-height: 1.2;
-  margin-block-end: 1.5rem;
+.choices__form {
+  
+  fieldset {
+    padding: 0;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  legend {
+    @include sr-only;
+  }
 }
 
-[role="timer"] {
-  width: 100%;
-  background-color: $pure-white;
-  height: 16px;
-  border-radius: 2rem;
-  position: relative;
+
+.answer__container {
   display: flex;
   align-items: center;
+  gap: 1rem;
 
-  span {
-    background-color: $purple;
-    width: 40%;
-    height: 8px;
-    border-radius: 2rem;
-    margin: 4px;
-  }
-}
-
-
-.form__answer {
-  margin-block-start: 2.5rem;
-}
-
-.answer {
-  background-color: $pure-white;
-  display: flex;
-  padding: .75rem;
-  border-radius: 12px;
-  font-size: 1.125rem;
-  font-weight: $fw-medium;
-
-  &:has(input[type="radio"]:checked) {
-    border: 3px solid $purple;
-  }
-  
-  .option {
+  .letter {
+    background-color: $light-grey;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
-
-    &:has(input[type="radio"]:checked) {
-      background-color: $purple;
-      color: $pure-white;
-    }
-    
-    span {
-      color: $grey-navy;
-      background-color: $light-grey;
-      padding-inline: 0.875rem;
-      padding-block: 0.6875rem;
-      border-radius: 6px;
-      // text-align: center;
-      display: block;
-
-      
-    }
-
-    p {
-      color: $dark-navy;
-    }
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 6px;
   }
 }
