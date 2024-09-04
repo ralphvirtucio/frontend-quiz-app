@@ -1,6 +1,5 @@
 @use '../abstracts' as *;
 
-
 .form__control {
   &--choice {
     background-color: $pure-white;
@@ -8,14 +7,13 @@
     padding-inline: 0.75rem;
     border-radius: 12px;
 
-
-    input[type="radio"] {
+    input[type='radio'] {
       display: none;
     }
   }
 }
 
-.form__control--choice:has(input[type="radio"]:checked) {
+.form__control--choice:has(input[type='radio']:checked) {
   border: 3px solid $purple;
 
   .answer__container {
@@ -27,3 +25,24 @@
     }
   }
 }
+
+  
+  #quiz-progress {
+   width: 100%;
+   -webkit-appearance: none;
+   appearance: none;
+   height: 1rem;
+   margin-block-start: 1.5rem;
+   margin-block-end: 2.5rem;
+
+   &::-webkit-progress-bar {
+    background-color: $pure-white;
+    border-radius: 1rem;
+    padding: 4px;
+   }
+
+   &::-webkit-progress-value {
+    background-color: $purple;
+    border-radius: 1rem;
+   }
+  }

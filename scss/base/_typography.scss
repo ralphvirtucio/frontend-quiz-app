@@ -19,9 +19,22 @@
   color: $grey-navy;
   font-size: clamp(0.875rem, 3vw, 1.25rem);
   margin-block-start: 1rem;
- 
 }
 
+.title {
+  color: $grey-navy;
+  font-size: 0.875rem;
+  font-style: italic;
+  font-weight: 400;
+  margin-block-end: 0.75rem;
+}
+
+.question {
+  font-size: $fs-body-m;
+  font-weight: $fw-medium;
+  color: $dark-navy;
+  line-height: 1.2;
+}
 
 .answer__container {
   font-size: 1.125rem;
