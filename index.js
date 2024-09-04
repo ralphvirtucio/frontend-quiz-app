@@ -17,6 +17,7 @@
 // // Event Listeners
 // toggle.addEventListener("click", handleToggleTheme)
 const subButtons = document.querySelectorAll(".btn__subject")
+const answers = document.querySelectorAll('input[type="radio"]')
 
 
 subButtons.forEach(btn => {

@@ -1,6 +1,5 @@
 @use '../abstracts' as *;
 
-// Button reset styles
 button {
   border: none;
   background-color: transparent;
@@ -52,6 +51,6 @@ button {
     font-weight: $fw-medium;
     color: $pure-white;
     padding-block: 1.25rem;
-    margin-block-start: 0.75rem;
+    margin-block-start: 0.75rem  ;
   }
 }

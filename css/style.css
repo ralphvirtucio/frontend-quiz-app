@@ -185,6 +185,17 @@ button {
   padding-inline: 0.75rem;
   border-radius: 12px;
 }
+.form__control--choice input[type=radio] {
+  display: none;
+}
+
+.form__control--choice:has(input[type=radio]:checked) {
+  border: 3px solid #A729F5;
+}
+.form__control--choice:has(input[type=radio]:checked) .answer__container .answers .letter {
+  background-color: #A729F5;
+  color: #FFF;
+}
 
 body {
   background-color: #F4F6FA;
@@ -235,9 +246,14 @@ body {
 .answer__container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+.answer__container .answers {
+  display: flex;
+  align-items: center;
   gap: 1rem;
 }
-.answer__container .letter {
+.answer__container .answers .letter {
   background-color: #F4F6FA;
   display: flex;
   justify-content: center;
@@ -245,6 +261,9 @@ body {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 6px;
+}
+.answer__container .is-answer {
+  display: none;
 }
 
 .header__main {

@@ -9,8 +9,21 @@
     border-radius: 12px;
 
 
-    // [type="radio"] {
-    //   display: none;
-    // }
+    input[type="radio"] {
+      display: none;
+    }
+  }
+}
+
+.form__control--choice:has(input[type="radio"]:checked) {
+  border: 3px solid $purple;
+
+  .answer__container {
+    .answers {
+      .letter {
+        background-color: $purple;
+        color: $pure-white;
+      }
+    }
   }
 }

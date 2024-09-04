@@ -23,7 +23,12 @@
 .answer__container {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: space-between;
+
+  .answers {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 
   .letter {
     background-color: $light-grey;
@@ -34,4 +39,10 @@
     height: 2.5rem;
     border-radius: 6px;
   }
+}
+
+.is-answer{
+  display: none;
+}
+
 }
