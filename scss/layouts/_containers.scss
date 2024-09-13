@@ -9,3 +9,12 @@
     max-width: 80rem;
   }
 }
+
+.question__container {
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to('medium') {
+   width: 75%;
+  }
+}

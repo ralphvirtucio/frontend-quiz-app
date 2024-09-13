@@ -6,6 +6,12 @@
     padding-block: 0.75rem;
     padding-inline: 0.75rem;
     border-radius: 12px;
+    cursor: pointer;
+
+    @include respond-to('medium') {
+      padding-inline: 1.25rem;
+      padding-block: 1.125rem;
+    }
 
     input[type='radio'] {
       display: none;
@@ -34,6 +40,10 @@
    height: 1rem;
    margin-block-start: 1.5rem;
    margin-block-end: 2.5rem;
+
+   @include respond-to('medium') {
+    margin-block-start: 180px;
+   }
 
    &::-webkit-progress-bar {
     background-color: $pure-white;

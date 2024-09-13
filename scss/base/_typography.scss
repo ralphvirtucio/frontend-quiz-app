@@ -23,21 +23,26 @@
 
 .title {
   color: $grey-navy;
-  font-size: 0.875rem;
+  font-size: clamp(0.875rem, 3vw, 1.25rem);
   font-style: italic;
   font-weight: 400;
   margin-block-end: 0.75rem;
+
+  @include respond-to('medium') {
+  margin-block-end: 1.7rem;
+
+  }
 }
 
 .question {
-  font-size: $fs-body-m;
+  font-size: clamp($fs-body-m, 5vw, 2.25rem);
   font-weight: $fw-medium;
   color: $dark-navy;
   line-height: 1.2;
 }
 
 .answer__container {
-  font-size: 1.125rem;
+  font-size: clamp(1.125rem, 2vw, 1.75rem);
   font-weight: $fw-medium;
 
   .letter {
