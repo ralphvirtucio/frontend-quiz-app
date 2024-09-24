@@ -1,20 +1,24 @@
 @use '../abstracts' as *;
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
 
-  @include respond-to('medium') {
-    grid-template-columns: 1fr 1fr;
-    max-width: 80rem;
-  }
+.wrapper {
+  padding-inline: 1.5rem;
 }
+// .container {
+//   display: grid;
+//   grid-template-columns: 1fr;
 
-.question__container {
-  display: flex;
-  flex-direction: column;
+//   @include respond-to('medium') {
+//     grid-template-columns: 1fr 1fr;
+//     max-width: 80rem;
+//   }
+// }
 
-  @include respond-to('medium') {
-   width: 75%;
-  }
-}
+// .question__container {
+//   display: flex;
+//   flex-direction: column;
+
+//   @include respond-to('medium') {
+//    width: 75%;
+//   }
+// }
