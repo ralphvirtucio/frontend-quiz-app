@@ -144,6 +144,11 @@ button[role=switch]::after {
 .question-form {
   margin-block-start: 2.5rem;
 }
+@media (min-width: 48em) {
+  .question-form {
+    margin-block-start: 4rem;
+  }
+}
 
 .choices {
   border: none;
@@ -151,7 +156,12 @@ button[role=switch]::after {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0.75rem;
+}
+@media (min-width: 48em) {
+  .choices {
+    gap: 1.5rem;
+  }
 }
 .choices legend {
   border: 0 !important;
@@ -178,7 +188,7 @@ button[role=switch]::after {
   gap: 1rem;
   color: #313E51;
   font-weight: 500;
-  font-size: 1.125rem;
+  font-size: clamp(1.125rem, 3vw, 1.75rem);
 }
 
 body {
@@ -265,11 +275,17 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+@media (min-width: 48em) {
+  .header {
+    padding-block-start: 3.375rem;
+    margin-block-end: 4rem;
+  }
+}
 .header .theme {
   align-self: flex-end;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
 }
 .header .theme button {
   line-height: 0;
@@ -295,6 +311,12 @@ body {
 
 .wrapper {
   padding-inline: 1.5rem;
+}
+@media (min-width: 48em) {
+  .wrapper {
+    max-width: 45rem;
+    margin-inline: auto;
+  }
 }
 
 .flex {

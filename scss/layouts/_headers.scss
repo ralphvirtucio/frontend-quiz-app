@@ -8,12 +8,17 @@
   justify-content: space-between;
   align-items: center;
 
+  @include respond-to("small") {
+    padding-block-start: 3.375rem;
+    margin-block-end: 4rem;
+  }
+
 
   .theme {
     align-self: flex-end;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
 
     button {
       line-height: 0;

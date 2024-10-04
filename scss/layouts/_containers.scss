@@ -3,6 +3,12 @@
 
 .wrapper {
   padding-inline: 1.5rem;
+
+  @include respond-to("small") {
+    max-width: 45rem;
+    margin-inline: auto;
+   
+  }
 }
 // .container {
 //   display: grid;
