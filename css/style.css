@@ -141,21 +141,40 @@ button[role=switch]::after {
   transform: translateX(-5px);
 }
 
-.question-form {
+.menu {
   margin-block-start: 2.5rem;
 }
 @media (min-width: 48em) {
-  .question-form {
+  .menu {
     margin-block-start: 4rem;
   }
 }
 @media (min-width: 64em) {
-  .question-form {
+  .menu {
     margin-block-start: 0;
   }
 }
+.menu .icon {
+  border-radius: 6px;
+}
+.menu .icon.icon--choice {
+  background-color: #F4F6FA;
+  padding: 0.6875rem 0.875rem;
+}
+.menu .icon.icon--html {
+  background-color: #FFF1E9;
+}
+.menu .icon.icon--css {
+  background-color: #E0FDEF;
+}
+.menu .icon.icon--javascript {
+  background-color: #EBF0FF;
+}
+.menu .icon.icon--accessibility {
+  background-color: #F6E7FF;
+}
 
-.subjects {
+.choices {
   border: none;
   padding: 0;
   margin: 0;
@@ -164,11 +183,11 @@ button[role=switch]::after {
   gap: 0.75rem;
 }
 @media (min-width: 48em) {
-  .subjects {
+  .choices {
     gap: 1.5rem;
   }
 }
-.subjects legend {
+.choices legend {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
   -webkit-clip-path: inset(50%) !important;
@@ -181,7 +200,7 @@ button[role=switch]::after {
   width: 1px !important;
   white-space: nowrap !important;
 }
-.subjects .subject {
+.choices .subject {
   background-color: #FFF;
   box-shadow: 0 16px 40px rgba(143, 160, 193, 0.14);
   padding: 0.75rem;
@@ -189,11 +208,11 @@ button[role=switch]::after {
   cursor: pointer;
 }
 @media (min-width: 64em) {
-  .subjects .subject {
+  .choices .subject {
     padding: 1.25rem;
   }
 }
-.subjects .subject label {
+.choices .subject label {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -202,24 +221,24 @@ button[role=switch]::after {
   font-size: clamp(1.125rem, 3vw, 1.75rem);
   cursor: pointer;
 }
-.subjects .subject label input[type=radio] {
+.choices .subject label input[type=radio] {
   display: none;
 }
 @media (min-width: 48em) {
-  .subjects .subject label {
+  .choices .subject label {
     gap: 2rem;
   }
 }
-.subjects :has(.html input[type=radio]:checked) {
+.choices :has(.html input[type=radio]:checked) {
   border: 3px solid #FF7E35;
 }
-.subjects :has(.css input[type=radio]:checked) {
+.choices :has(.css input[type=radio]:checked) {
   border: 3px solid #2FD887;
 }
-.subjects :has(.js input[type=radio]:checked) {
+.choices :has(.js input[type=radio]:checked) {
   border: 3px solid #306AFF;
 }
-.subjects :has(.accessibility input[type=radio]:checked) {
+.choices :has(.accessibility input[type=radio]:checked) {
   border: 3px solid #A729F5;
 }
 
@@ -241,38 +260,66 @@ body {
   }
 }
 
-.choices__form fieldset {
-  padding: 0;
-  border: 0;
+.subject-title {
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  align-items: center;
+  gap: 1rem;
 }
-@media (min-width: 48em) {
-  .choices__form fieldset {
-    gap: 1.5rem;
+.subject-title .icon__container {
+  background-color: #E0FDEF;
+  padding: 6px;
+  border-radius: 4px;
+}
+.subject-title p {
+  color: #313E51;
+  font-weight: 500;
+}
+
+.choice:has(label input[type=radio]:checked) {
+  border: 3px solid #A729F5;
+}
+.choice:has(label input[type=radio]:checked) .icon--choice {
+  background-color: #A729F5;
+  color: #FFF;
+}
+
+.choice {
+  background-color: #FFF;
+  box-shadow: 0 16px 40px rgba(143, 160, 193, 0.14);
+  padding: 0.75rem;
+  border-radius: 12px;
+  cursor: pointer;
+}
+@media (min-width: 64em) {
+  .choice {
+    padding: 1.25rem;
   }
 }
-.choices__form legend {
-  border: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px) !important;
-  -webkit-clip-path: inset(50%) !important;
-  clip-path: inset(50%) !important;
-  height: 1px !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  width: 1px !important;
-  white-space: nowrap !important;
+.choice label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #313E51;
+  font-weight: 500;
+  font-size: clamp(1.125rem, 3vw, 1.75rem);
+  cursor: pointer;
+}
+.choice label div {
+  font-size: clamp(1.125rem, 3vw, 1.75rem);
+  color: #626C7F;
 }
 
 .header {
   padding-block: 1rem;
   margin-block-end: 2rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+.header.header--menu {
+  justify-content: flex-end;
+}
+.header.header--questions {
+  justify-content: space-between;
 }
 @media (min-width: 48em) {
   .header {

@@ -2,7 +2,7 @@
 @use '../abstracts' as *;
 
 
-.question-form {
+.menu {
   margin-block-start: 2.5rem;
 
   @include respond-to("small") {
@@ -13,9 +13,34 @@
   @include respond-to("medium") {
     margin-block-start: 0;
   }
+
+  .icon {
+    border-radius: 6px;
+    
+    &.icon--choice {
+      background-color: $light-grey;
+      padding: 0.6875rem 0.875rem;
+    }
+
+    &.icon--html {
+      background-color: $clr-html;
+    }
+
+    &.icon--css {
+      background-color: $clr-css;
+    }
+
+    &.icon--javascript {
+      background-color: $clr-javascript;
+    }
+
+    &.icon--accessibility {
+      background-color: $clr-accessibility;
+    }
+  }
 }
 
-.subjects {
+.choices {
   border: none;
   padding: 0;
   margin: 0;
@@ -38,7 +63,8 @@
     padding: 0.75rem;
     border-radius: 12px;
     cursor: pointer;
-
+    
+    
    
 
     @include respond-to("medium") {
@@ -54,6 +80,10 @@
       font-size: clamp(1.125rem, 3vw, 1.75rem);
       cursor: pointer;
 
+    
+
+        
+     
       
       input[type="radio"] {
         display: none;

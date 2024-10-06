@@ -5,8 +5,15 @@
   padding-block: 1rem;
   margin-block-end: 2rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+
+&.header--menu {
+  justify-content: flex-end;
+}
+
+&.header--questions {
+  justify-content: space-between;
+}
 
   @include respond-to("small") {
     padding-block-start: 3.375rem;

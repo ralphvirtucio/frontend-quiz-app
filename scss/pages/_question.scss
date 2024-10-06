@@ -1,22 +1,59 @@
 @use '../abstracts' as *;
 
-.choices__form {
-  
-  fieldset {
-    padding: 0;
-    border: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+.subject-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 
-    @include respond-to('small') {
-      gap: 1.5rem;
-    }
+  .icon__container {
+    background-color: $clr-css;
+    padding: 6px;
+    border-radius: 4px;
   }
 
-  legend {
-    @include sr-only;
+
+  p {
+    color: $dark-navy;
+    font-weight: $fw-medium;
   }
 }
 
+.choice:has(label input[type="radio"]:checked) {
+  border: 3px solid #A729F5;
 
+  .icon--choice {
+    background-color: #A729F5;
+    color: $pure-white;
+  }
+}
+
+.choice {
+  background-color: $pure-white;
+  box-shadow: 0 16px 40px rgba(143, 160, 193, 0.14);
+  padding: 0.75rem;
+  border-radius: 12px;
+  cursor: pointer;
+
+  @include respond-to("medium") {
+    padding: 1.25rem;
+
+  }
+
+  label {
+    display: flex; 
+    align-items: center;
+    gap: 1rem;
+    color: $dark-navy;
+    font-weight: $fw-medium;
+    font-size: clamp(1.125rem, 3vw, 1.75rem);
+    cursor: pointer;
+
+    div {
+      font-size: clamp(1.125rem, 3vw, 1.75rem);
+      color: $grey-navy;
+    }
+  }
+
+ 
+
+}
