@@ -9,9 +9,13 @@
     margin-block-start: 4rem;
   }
   
+
+  @include respond-to("medium") {
+    margin-block-start: 0;
+  }
 }
 
-.choices {
+.subjects {
   border: none;
   padding: 0;
   margin: 0;
@@ -28,12 +32,19 @@
   }
 
   
-  .choice {
+  .subject {
     background-color: $pure-white;
     box-shadow: 0 16px 40px rgba(143, 160, 193, 0.14);
-    padding: 12px;
+    padding: 0.75rem;
     border-radius: 12px;
-    
+    cursor: pointer;
+
+   
+
+    @include respond-to("medium") {
+      padding: 1.25rem;
+    }
+
     label {
       display: flex; 
       align-items: center;
@@ -41,63 +52,34 @@
       color: $dark-navy;
       font-weight: $fw-medium;
       font-size: clamp(1.125rem, 3vw, 1.75rem);
+      cursor: pointer;
+
+      
+      input[type="radio"] {
+        display: none;
+      }
+
+      @include respond-to("small") {
+        gap: 2rem;
+      }
     }
   }
+
+  :has(.html input[type="radio"]:checked) {
+    border: 3px solid #FF7E35;
+  }
+  
+  :has(.css input[type="radio"]:checked) {
+    border: 3px solid #2FD887;
+  }
+
+  :has(.js input[type="radio"]:checked) {
+    border: 3px solid #306AFF;
+  }
+
+  :has(.accessibility input[type="radio"]:checked) {
+    border: 3px solid #A729F5;
+  }
+
 }
 
-// .form__control {
-//   &--choice {
-//     background-color: $pure-white;
-//     padding-block: 0.75rem;
-//     padding-inline: 0.75rem;
-//     border-radius: 12px;
-//     cursor: pointer;
-
-//     @include respond-to('medium') {
-//       padding-inline: 1.25rem;
-//       padding-block: 1.125rem;
-//     }
-
-//     input[type='radio'] {
-//       display: none;
-//     }
-//   }
-// }
-
-// .form__control--choice:has(input[type='radio']:checked) {
-//   border: 3px solid $purple;
-
-//   .answer__container {
-//     .answers {
-//       .letter {
-//         background-color: $purple;
-//         color: $pure-white;
-//       }
-//     }
-//   }
-// }
-
-  
-//   #quiz-progress {
-//    width: 100%;
-//    -webkit-appearance: none;
-//    appearance: none;
-//    height: 1rem;
-//    margin-block-start: 1.5rem;
-//    margin-block-end: 2.5rem;
-
-//    @include respond-to('medium') {
-//     margin-block-start: 180px;
-//    }
-
-//    &::-webkit-progress-bar {
-//     background-color: $pure-white;
-//     border-radius: 1rem;
-//     padding: 4px;
-//    }
-
-//    &::-webkit-progress-value {
-//     background-color: $purple;
-//     border-radius: 1rem;
-//    }
-//   }

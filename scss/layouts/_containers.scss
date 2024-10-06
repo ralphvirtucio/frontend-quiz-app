@@ -9,22 +9,13 @@
     margin-inline: auto;
    
   }
+
+  @include respond-to("medium") {
+    max-width: 64rem;
+  }
+
+
+  @include respond-to("large") {
+    max-width: 80rem;
+  }
 }
-// .container {
-//   display: grid;
-//   grid-template-columns: 1fr;
-
-//   @include respond-to('medium') {
-//     grid-template-columns: 1fr 1fr;
-//     max-width: 80rem;
-//   }
-// }
-
-// .question__container {
-//   display: flex;
-//   flex-direction: column;
-
-//   @include respond-to('medium') {
-//    width: 75%;
-//   }
-// }

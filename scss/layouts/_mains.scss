@@ -1,12 +1,9 @@
 @use '../abstracts' as *;
 
-.quiz-menu {
-  padding-inline: 1.5rem;
 
-  @include respond-to('small') {
-    padding-inline: 4rem;
-  }
-  @include respond-to('medium') {
-    padding-inline: 2rem;
+.quiz {
+  @include respond-to("medium") {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }

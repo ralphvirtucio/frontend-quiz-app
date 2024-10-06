@@ -1,32 +1,20 @@
 @use '../abstracts' as *;
 
-
-// body {
-
-//   font-family: $ff-main;
-
-
-//   @include respond-to("small") {
-//     background-image: url('/assets/images/pattern-background-tablet-light.svg');
-//   }
-
-  
-//   @include respond-to("medium") {
-//     background-image: url('/assets/images/pattern-background-desktop-light.svg');
-//     background-size: cover;
-//     display: grid;
-//     place-items: center;
-//     grid-template-rows: 20rem 18rem;
-//   }
-// }
-
 body {
   font-family: $ff-main;
-  // display: grid;
-  // place-items: center;
   background-color: $light-grey;
   background-image: url('/assets/images/pattern-background-mobile-light.svg');
   background-repeat: no-repeat;
+
+    @include respond-to("small") {
+    background-image: url('/assets/images/pattern-background-tablet-light.svg');
+  }
+    @include respond-to("medium") {
+    background-image: url('/assets/images/pattern-background-desktop-light.svg');
+    background-size: cover;
+  }
+
+
 }
 
 // :root {
