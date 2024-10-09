@@ -23,3 +23,20 @@ button[role="switch"] {
     transform: translateX(-5px);
   }
 }
+
+button[type="submit"] {
+  background-color: $purple;
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-size: clamp(1.125rem, 4vw, 1.75rem);
+  font-weight: $fw-medium;
+  color: $pure-white;
+  padding-block: 1.25rem;
+  margin-block-start: 0.75rem;
+
+  @include respond-to("small") {
+    margin-block-start: 2rem;
+  }
+}

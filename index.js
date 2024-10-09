@@ -16,28 +16,28 @@
 
 // // Event Listeners
 // toggle.addEventListener("click", handleToggleTheme)
-const subButtons = document.querySelectorAll(".btn__subject")
-const answers = document.querySelectorAll('input[type="radio"]')
+// const subButtons = document.querySelectorAll(".btn__subject")
+// const answers = document.querySelectorAll('input[type="radio"]')
 
 
-subButtons.forEach(btn => {
-  btn.addEventListener('click', async (e) => {
-    const value = e.target.textContent.trim()
+// subButtons.forEach(btn => {
+//   btn.addEventListener('click', async (e) => {
+//     const value = e.target.textContent.trim()
     
-    try {
-      const res = fetchData(value)
+//     try {
+//       const res = fetchData(value)
 
-      res.then(data => {
-        console.log(data, 'button ' + value)
-      })
-    } catch (e) {
-      console.error(e)
-    }
-  })
+//       res.then(data => {
+//         console.log(data, 'button ' + value)
+//       })
+//     } catch (e) {
+//       console.error(e)
+//     }
+//   })
   
-})
+// })
 
-const fetchData = async (query) => {
+const fetchData = async (query) => { 
   try {
     const res = await fetch('data.json');
 
@@ -47,9 +47,9 @@ const fetchData = async (query) => {
 
     const data = await res.json()
 
-    const quiz = data.quizzes.filter(quiz => quiz.title === query)
+    console.log(data)
 
-    return quiz
+    // return quiz
     
   } catch (error) {
     console.error(error.message)
