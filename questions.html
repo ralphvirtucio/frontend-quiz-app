@@ -39,16 +39,10 @@
           defer></script>
         <title>Frontend quiz app | Questions</title>
       </head>
-      <body>
+      <body class="question-page">
         <div class="wrapper">
           <header class="header header--questions">
-            <div class="subject-title">
-              <div class="icon__container">
-                <img
-                  src="./assets/images/icon-css.svg"
-                  alt="CSS" />
-              </div>
-              <h1>CSS</h1>
+            <div class="js-subject-title">
             </div>
 
             <div class="theme">
@@ -93,8 +87,8 @@
           <main class="quiz">
             <section class="question-menu">
              <div class="question-menu__labels">
-              <span class="question-total">Question <span id="js-question-total">6 of 10</span></span>
-              <h2 class="question">What does CSS stand for?</h2>
+              <span class="question-total">Question <span id="js-question-total"></span></span>
+              <h2 class="question"></h2>
              </div>
               <progress
                 type="range"
@@ -110,26 +104,7 @@
               <fieldset class="choices">
                 <legend class="visually-hidden">Questions</legend>
 
-                <div class="choice">
-                  <label for="option-a">
-                    <div class="icon icon--choice">A</div>
-                    <input
-                      type="radio"
-                      name="choice"
-                      id="option-a" />
-                    Colorful Style Sheets
-                  </label>
-                </div>
-                <div class="choice">
-                  <label for="option-b">
-                    <div class="icon icon--choice">B</div>
-                    <input
-                      type="radio"
-                      name="choice"
-                      id="option-b" />
-                    Computer Style Sheets
-                  </label>
-                </div>
+               <!-- JS GENERATED DYNAMIC -->
               </fieldset>
 
               <button type="submit" class="submit-btn">Submit Answer</button>

@@ -146,7 +146,6 @@ button[type=submit] {
   width: 100%;
   border-radius: 12px;
   cursor: pointer;
-  font-size: 1.125rem;
   font-size: clamp(1.125rem, 4vw, 1.75rem);
   font-weight: 500;
   color: #FFF;
@@ -172,23 +171,24 @@ button[type=submit] {
     margin-block-start: 0;
   }
 }
-.menu .icon {
+
+.icon {
   border-radius: 6px;
 }
-.menu .icon.icon--choice {
+.icon.icon--choice {
   background-color: #F4F6FA;
   padding: 0.6875rem 0.875rem;
 }
-.menu .icon.icon--html {
+.icon.icon--html {
   background-color: #FFF1E9;
 }
-.menu .icon.icon--css {
+.icon.icon--css {
   background-color: #E0FDEF;
 }
-.menu .icon.icon--javascript {
+.icon.icon--javascript {
   background-color: #EBF0FF;
 }
-.menu .icon.icon--accessibility {
+.icon.icon--accessibility {
   background-color: #F6E7FF;
 }
 
@@ -278,17 +278,32 @@ body {
   }
 }
 
-.subject-title {
+.js-subject-title {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.subject-title .icon__container {
-  background-color: #E0FDEF;
+.js-subject-title .icon__html {
   padding: 6px;
   border-radius: 4px;
+  background-color: #FFF1E9;
 }
-.subject-title h1 {
+.js-subject-title .icon__css {
+  padding: 6px;
+  border-radius: 4px;
+  background-color: #E0FDEF;
+}
+.js-subject-title .icon__javascript {
+  padding: 6px;
+  border-radius: 4px;
+  background-color: #EBF0FF;
+}
+.js-subject-title .icon__accessibility {
+  padding: 6px;
+  border-radius: 4px;
+  background-color: #F6E7FF;
+}
+.js-subject-title h1 {
   color: #313E51;
   font-weight: 500;
   font-size: clamp(1.125rem, 4vw, 1.75rem);

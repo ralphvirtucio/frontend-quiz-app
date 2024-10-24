@@ -14,31 +14,34 @@
     margin-block-start: 0;
   }
 
-  .icon {
-    border-radius: 6px;
-    
-    &.icon--choice {
-      background-color: $light-grey;
-      padding: 0.6875rem 0.875rem;
-    }
+}
 
-    &.icon--html {
-      background-color: $clr-html;
-    }
 
-    &.icon--css {
-      background-color: $clr-css;
-    }
+.icon {
+  border-radius: 6px;
+  
+  &.icon--choice {
+    background-color: $light-grey;
+    padding: 0.6875rem 0.875rem;
+  }
 
-    &.icon--javascript {
-      background-color: $clr-javascript;
-    }
+  &.icon--html {
+    background-color: $clr-html;
+  }
 
-    &.icon--accessibility {
-      background-color: $clr-accessibility;
-    }
+  &.icon--css {
+    background-color: $clr-css;
+  }
+
+  &.icon--javascript {
+    background-color: $clr-javascript;
+  }
+
+  &.icon--accessibility {
+    background-color: $clr-accessibility;
   }
 }
+
 
 .choices {
   border: none;

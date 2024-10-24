@@ -1,16 +1,30 @@
 @use '../abstracts' as *;
 
-.subject-title {
+.js-subject-title {
   display: flex;
   align-items: center;
   gap: 1rem;
 
-  .icon__container {
-    background-color: $clr-css;
+  .icon__html {
     padding: 6px;
     border-radius: 4px;
+    background-color: $clr-html;
   }
-
+  .icon__css {
+    padding: 6px;
+    border-radius: 4px;
+    background-color: $clr-css;
+  }
+  .icon__javascript {
+    padding: 6px;
+    border-radius: 4px;
+    background-color: $clr-javascript;
+  }
+  .icon__accessibility {
+    padding: 6px;
+    border-radius: 4px;
+    background-color: $clr-accessibility;
+  }
 
   h1 {
     color: $dark-navy;
