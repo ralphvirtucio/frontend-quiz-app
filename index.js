@@ -1,5 +1,4 @@
 const subject_btns = document.querySelectorAll("[name='subject']")
-const questionPage = document.querySelector('.question-page')
 
 
 const fetchData = async (query) => {
@@ -95,6 +94,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const input = document.createElement('input');
     input.type = 'radio';
     input.name = 'choice';
+    input.value = option
     input.id = choiceId;
 
     label.appendChild(icon);
@@ -106,7 +106,48 @@ window.addEventListener('DOMContentLoaded', () => {
   })
 
 
+  questionMenu.addEventListener('submit', (e) => submitQuestion(e, answer, choicesEl))
 
 
-  
 })
+
+
+function submitQuestion(e, answer, choicesEl) {
+    e.preventDefault()
+
+  const choices = choicesEl.querySelectorAll(".choice")
+  const formData = new FormData(e.target)
+  const data = Object.fromEntries(formData)
+
+
+  const { choice }=  data
+  const arrChoice = Array.from(choices)
+  const selectedChoice = arrChoice.filter(el => {
+    const input = el.querySelector('input')
+
+    return input.value === choice
+  })
+
+  const isAnswer = selectedChoice.some(el => {
+    const input = el.querySelector('input')
+    return input.value === answer
+  })
+
+  if (isAnswer) {
+    selectedChoice[0].style.border = "3px solid green"
+
+  } else {
+    selectedChoice[0].style.border = "3px solid red"
+
+  }
+}
+// const submitQuestion = (e, answer) => { 
+//   e.preventDefault()
+
+//   const formData = new FormData(e.target)
+//   const data = Object.fromEntries(formData)
+
+//   const { choice }=  data
+
+//   console.log(this.choi)
+// }
