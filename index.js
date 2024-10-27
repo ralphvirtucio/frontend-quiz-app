@@ -97,10 +97,9 @@ window.addEventListener('DOMContentLoaded', () => {
     input.name = 'choice';
     input.id = choiceId;
 
-    // Add the option and the <head> string as text
     label.appendChild(icon);
     label.appendChild(input);
-    label.appendChild(document.createTextNode(`${option} <head>`)); // Treat as text
+    label.appendChild(document.createTextNode(`${option}`)); // Treat as text
 
     choice.appendChild(label); // Append label to choice
     choicesEl.append(choice);   // Append choice to the choices container
