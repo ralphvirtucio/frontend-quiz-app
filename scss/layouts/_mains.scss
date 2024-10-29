@@ -1,9 +1,0 @@
-@use '../abstracts' as *;
-
-
-.quiz {
-  @include respond-to("medium") {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-}

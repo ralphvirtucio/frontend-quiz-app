@@ -1,24 +1,46 @@
 
 
-// Colors
+// // Colors
+/* LIGHT THEME */
+$light-bg: #F4F6FA;
+$light-heading-text: #313E51;
+$light-sec-heading-text: #626C7F;
+$light-choice-bg: #fff;
+$light-choice-text: #313E51;
+$light-error-text: #EE5454;
 
-$purple: #A729F5;
-$pure-white: #FFF;
-$dark-navy: #313E51;
-$grey-navy: #626C7F;
-$light-grey: #F4F6FA;
-$navy: #3B4D66;
-$light-bluish: #ABC1E1;
-$green: #26D782;
-$red: #EE5454;
+$light-theme: (
+  "light-bg": #F4F6FA,
+  "light-heading-text": #313E51,
+  "light-sec-heading-text": #626C7F,
+  "light-choice-bg": #fff,
+  "light-choice-text": #313E51,
+  "light-error-text": #EE5454
+);
 
-$clr-html: #FFF1E9;
-$clr-css: #E0FDEF;
-$clr-javascript: #EBF0FF;
-$clr-accessibility: #F6E7FF;
+
+/* DARK THEME */
+$dark-bg:#313E51;
+$dark-heading-text: #fff;
+$dark-sec-heading-text: #ABC1E1;
+$dark-choice-bg: #3B4D66;
+$dark-choice-text: #fff;
+
+
+$choice-letter-bg: #F4F6FA;
+$choice-letter: #626C7F;
+$main-btn-clr: #A729F5;
+
+$selected-choice-bc: #A729F5;
+$correct-choice-bc: #26D782;
+$error-choice-bc: #EE5454;
+
+$html-clr: #FFF1E9;
+$css-clr: #E0FDEF;
+$javascript-clr: #EBF0FF;
+$accessibility-clr: #F6E7FF;
 
 // Typography
-
 $ff-main: "Rubik", sans-serif;
 $fs-display: 9rem;
 $fs-heading-l: 4rem;
@@ -32,8 +54,6 @@ $fw-bold: 700;
 $fw-medium: 500;
 
 $lh-medium: 1.25rem;
-
-// Breakpoints
 
 $breakpoints: (
   'small': (min-width: 48em),
