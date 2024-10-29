@@ -1,5 +1,11 @@
-
+@use '../abstracts' as *;
 
 body {
   background-repeat: no-repeat;
+
+  @include respond-to('medium') {
+    background-size: cover;
+    // display: flex;
+    // align-items: center;
+  }
 }

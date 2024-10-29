@@ -3,4 +3,7 @@
 .container {
   padding-inline: var(--fluid-24-64);
   padding-block-end: 1rem;
+
+  max-width: 100rem;
+  margin-inline: auto;
 }

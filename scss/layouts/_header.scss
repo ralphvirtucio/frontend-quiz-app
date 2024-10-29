@@ -1,4 +1,4 @@
-
+@use '../abstracts' as *;
 
 .header-menu {
   display: flex;
@@ -6,4 +6,9 @@
   justify-content: flex-end;
   padding-block: 1rem;
   margin-block-end: 2rem;
+
+  @include respond-to('medium') {
+    padding-block: 0;
+    margin-block: 6rem;
+  }
 }

@@ -1,0 +1,13 @@
+@use '../abstracts' as *;
+
+
+.start-menu {
+  display: grid;
+  grid-template-columns: 1fr;
+
+
+  @include respond-to('medium') {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
