@@ -1,35 +1,47 @@
 
 
 // // Colors
-/* LIGHT THEME */
-$light-bg: #F4F6FA;
-$light-heading-text: #313E51;
-$light-sec-heading-text: #626C7F;
-$light-choice-bg: #fff;
-$light-choice-text: #313E51;
-$light-error-text: #EE5454;
 
-$light-theme: (
-  "light-bg": #F4F6FA,
-  "light-heading-text": #313E51,
-  "light-sec-heading-text": #626C7F,
-  "light-choice-bg": #fff,
-  "light-choice-text": #313E51,
-  "light-error-text": #EE5454
+:root {
+  --step--2: clamp(0.7813rem, 0.5178rem + 1.124vw, 1.3889rem);
+  --step--1: clamp(0.9375rem, 0.6214rem + 1.3487vw, 1.6667rem);
+  --step-0: clamp(1.125rem, 0.7457rem + 1.6185vw, 2rem);
+  --step-1: clamp(1.35rem, 0.8948rem + 1.9422vw, 2.4rem);
+  --step-2: clamp(1.62rem, 1.0738rem + 2.3306vw, 2.88rem);
+  --step-3: clamp(1.944rem, 1.2885rem + 2.7968vw, 3.456rem);
+  --step-4: clamp(2.3328rem, 1.5462rem + 3.3561vw, 4.1472rem);
+  --step-5: clamp(2.7994rem, 1.8555rem + 4.0273vw, 4.9766rem);
+
+  --fluid-24-64: clamp(1.5rem, 0.4162rem + 4.6243vw, 4rem);
+
+}
+
+/* LIGHT THEME */
+$light-theme-colors: (
+  background: #F4F6FA,
+  text: #313E51,
+  secondary-text: #626C7F,
+  icon-color: #626C7F,
+  card-bg: #fff,
+  error-text: #EE5454,
+  box-shadow-clr: hsla(220, 29%, 66%, 0.14)
 );
 
+$dark-theme-colors: (
+  background: #313E51,
+  text: #fff,
+  secondary-text: #ABC1E1,
+  icon-color: #fff,
+  card-bg: #3B4D66,
+  error-text: #fff,
+  box-shadow-clr: hsla(216, 25%, 25%, 0.14)
+);
 
-/* DARK THEME */
-$dark-bg:#313E51;
-$dark-heading-text: #fff;
-$dark-sec-heading-text: #ABC1E1;
-$dark-choice-bg: #3B4D66;
-$dark-choice-text: #fff;
-
+$white: #fff;
 
 $choice-letter-bg: #F4F6FA;
 $choice-letter: #626C7F;
-$main-btn-clr: #A729F5;
+$primary-clr: #A729F5;
 
 $selected-choice-bc: #A729F5;
 $correct-choice-bc: #26D782;
@@ -37,8 +49,8 @@ $error-choice-bc: #EE5454;
 
 $html-clr: #FFF1E9;
 $css-clr: #E0FDEF;
-$javascript-clr: #EBF0FF;
-$accessibility-clr: #F6E7FF;
+$js-clr: #EBF0FF;
+$ally-clr: #F6E7FF;
 
 // Typography
 $ff-main: "Rubik", sans-serif;

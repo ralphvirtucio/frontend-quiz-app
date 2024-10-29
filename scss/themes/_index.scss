@@ -1,0 +1,22 @@
+@use '../abstracts' as *;
+
+
+body {
+  transition: background-color 0.3s, color 0.3s;
+  @include theme($light-theme-colors);
+}
+
+.light-theme {
+  @include theme($light-theme-colors);
+  background-image: url('/assets/images/pattern-background-mobile-light.svg');
+
+}
+
+.dark-theme {
+  @include theme($dark-theme-colors);
+  background-image: url('/assets/images/pattern-background-mobile-dark.svg');
+
+  .switch-thumb {
+    transform: translateX(12px);
+  }
+}
