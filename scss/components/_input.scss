@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+
+#quiz-progress {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1rem;
+  border-radius: 1rem;
+
+
+  &::-webkit-progress-bar {
+    background-color: $white;
+    padding: 4px;
+    border-radius: 1rem;
+   }
+   &::-webkit-progress-value {
+    background-color: $primary-clr;
+    border-radius: 1rem;
+   }
+}

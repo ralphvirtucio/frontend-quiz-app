@@ -12,3 +12,23 @@
     margin-block: 6rem;
   }
 }
+
+.question__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+  margin-block-end: 2rem;
+
+  @include respond-to('medium') {
+    padding-block: 0;
+    margin-block: 6rem;
+  }
+
+  .question__title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: var(--step--1);
+  }
+}

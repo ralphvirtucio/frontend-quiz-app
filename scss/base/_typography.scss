@@ -25,3 +25,16 @@ body {
     }
   }
 }
+
+.quiz__length {
+  font-style: italic;
+  font-size: var(--step--1);
+}
+
+.quiz__question {
+  font-size: var(--step-1);
+  line-height: 1.2;
+  font-weight: 600;
+  margin-block-start: .75rem;
+  margin-block-end: 1.5rem;
+}

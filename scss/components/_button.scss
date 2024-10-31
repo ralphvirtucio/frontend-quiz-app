@@ -61,3 +61,14 @@
 }
 
 
+.primary_btn {
+  color: $white;
+  background-color: $primary-clr;
+  margin-block-start: .75rem; 
+  border: none;
+  border-radius: .75rem;
+  padding-block: .75rem;
+  width: 100%;
+  font-size: var(--step-0);
+  font-weight: 500;
+}

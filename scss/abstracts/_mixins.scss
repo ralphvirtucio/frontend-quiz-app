@@ -47,6 +47,10 @@
     color: map-get($map: $colors, $key: secondary-text)
   }
 
+  .quiz__length {
+    color: map-get($map: $colors, $key: secondary-text)
+  }
+
   .subjects {
     .item {
       .subject{
@@ -55,6 +59,20 @@
         box-shadow: 0 16px 40px map-get($map: $colors, $key: box-shadow-clr);
       }
     }
+  }
+
+  .choices {
+    .choice {
+      button {
+        background-color: map-get($map: $colors, $key: card-bg);
+        color: map-get($map: $colors, $key: text);
+        box-shadow: 0 16px 40px map-get($map: $colors, $key: box-shadow-clr);
+      }
+    }
+  }
+
+  .primary-btn {
+    box-shadow: 0 16px 40px map-get($map: $colors, $key: box-shadow-clr);
   }
 }
 
