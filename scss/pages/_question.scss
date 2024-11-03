@@ -1,5 +1,9 @@
 @use '../abstracts' as *;
 
+.question__choice {
+  position: relative;
+}
+
 .choices {
   list-style: none;
   padding: 0;
@@ -36,8 +40,8 @@
 }
 
 .letter {
-  color: #626C7F;
-  background-color: #F4F6FA;
+  color: #626c7f;
+  background-color: #f4f6fa;
   width: 40px;
   height: 40px;
   display: flex;
@@ -50,16 +54,26 @@
   line-height: 0;
 }
 
+#no-answer-msg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--step--2);
+  margin-block-start: 1.125rem;
+}
 
 .score {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-block: 2rem;
-  border-radius: .75rem;
+  border-radius: 0.75rem;
   margin-block-start: 2.5rem;
 
-  
   @include respond-to('medium') {
     margin-block-start: 0;
   }

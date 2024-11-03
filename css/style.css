@@ -136,6 +136,10 @@ body {
   }
 }
 
+.question__choice {
+  position: relative;
+}
+
 .choices {
   list-style: none;
   padding: 0;
@@ -169,8 +173,8 @@ body {
 }
 
 .letter {
-  color: #626C7F;
-  background-color: #F4F6FA;
+  color: #626c7f;
+  background-color: #f4f6fa;
   width: 40px;
   height: 40px;
   display: flex;
@@ -181,6 +185,18 @@ body {
 
 .correct-incorrect-icon {
   line-height: 0;
+}
+
+#no-answer-msg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--step--2);
+  margin-block-start: 1.125rem;
 }
 
 .score {
@@ -333,6 +349,10 @@ body .primary-btn {
   transform: translateX(12px);
 }
 
+button {
+  cursor: pointer;
+}
+
 .switch {
   background-color: transparent;
   border: none;
@@ -434,8 +454,12 @@ body .primary-btn {
   appearance: none;
   height: 1rem;
   border-radius: 1rem;
-  margin-block-start: auto;
-  margin-block-end: 3rem;
+}
+@media (min-width: 64em) {
+  #quiz-progress {
+    margin-block-start: auto;
+    margin-block-end: 3.5rem;
+  }
 }
 #quiz-progress::-webkit-progress-bar {
   background-color: #fff;

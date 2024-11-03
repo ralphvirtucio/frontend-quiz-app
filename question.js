@@ -8,6 +8,7 @@ const questionChoice = document.querySelector('.question__choice')
 const choicesEl = questionChoice.querySelector('.choices')
 const submitBtn = document.querySelector('.submit-btn')
 const nextBtn = document.querySelector('.next-btn')
+const errorMessage = document.querySelector('#no-answer-msg')
 
 const scoreSubject = document.querySelector('.score__subject')
 const scoreQLength = document.querySelector('#js-question-length')
@@ -16,6 +17,8 @@ const playAgainBtn = document.querySelector('#play-again')
 const themeSwitcher = document.querySelector('#themeSwitcher')
 
 const body = document.body
+scoreEl.style.display = 'none'
+
 
 const savedTheme = localStorage.getItem("theme") || "light"
 body.classList.add(`${savedTheme}-theme`);
@@ -41,7 +44,6 @@ const letters = ["A", "B", "C", "D"]
 const userAnswer = []
 let userScore = 0
 
-scoreEl.style.display = 'none'
 
 document.title = `${quiz.title} Quiz`
 
@@ -138,6 +140,7 @@ const createChoiceButton = (question) => {
 
 const handleChoiceClick = (e, selectedLetter) => {
   if(!userAnswer.length) {
+    errorMessage.style.display = "none"
     const userAnswerObj = {
       letter: selectedLetter,
       answer: e.currentTarget,
@@ -181,10 +184,9 @@ nextBtn.addEventListener('click', (e) => {
 
 submitBtn.addEventListener('click', (e) => {
   if(!userAnswer.length) {
-    alert('Please select an answer')
+    errorMessage.style.display = "flex"
     return
   }
-
   const {letter, answer } = userAnswer[0]
   const choices = document.querySelectorAll('.choice')
   const selectedAnswer = answer.dataset.choice

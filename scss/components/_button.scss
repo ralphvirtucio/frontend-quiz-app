@@ -1,5 +1,9 @@
 @use '../abstracts' as *;
 
+button {
+  cursor: pointer
+}
+
 .switch {
   background-color: transparent;
   border: none;
