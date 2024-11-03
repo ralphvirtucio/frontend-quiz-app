@@ -7,7 +7,8 @@
   appearance: none;
   height: 1rem;
   border-radius: 1rem;
-
+  margin-block-start: auto;
+margin-block-end: 3rem;
 
   &::-webkit-progress-bar {
     background-color: $white;

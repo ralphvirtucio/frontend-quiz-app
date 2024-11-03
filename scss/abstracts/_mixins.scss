@@ -71,6 +71,14 @@
     }
   }
 
+  .score {
+    background-color: map-get($map: $colors, $key: card-bg);
+  }
+
+  .score__info {
+    color: map-get($map: $colors, $key: secondary-text)
+  }
+
   .primary-btn {
     box-shadow: 0 16px 40px map-get($map: $colors, $key: box-shadow-clr);
   }

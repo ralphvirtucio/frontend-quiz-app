@@ -11,3 +11,37 @@
   }
 
 }
+
+.quiz {
+  display: grid;
+  grid-template-columns: 1fr;
+
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include respond-to('medium') {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+
+}
+// .quiz {
+//   display: none;
+// }
+
+.score__section {
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+  
+      @include respond-to('medium') {
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+    }
+   
+  }
+}
+

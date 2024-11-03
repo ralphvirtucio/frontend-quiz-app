@@ -1,5 +1,5 @@
 const quizEl = document.querySelector('.quiz')
-const scoreEl = document.querySelector('.score')
+const scoreEl = document.querySelector('.score__section')
 const questionTitle = document.querySelector('.question__title')
 const quizInfo = document.querySelector('.quiz__info')
 const questionLength = document.querySelector('.quiz__length')
@@ -9,6 +9,10 @@ const choicesEl = questionChoice.querySelector('.choices')
 const submitBtn = document.querySelector('.submit-btn')
 const nextBtn = document.querySelector('.next-btn')
 
+const scoreSubject = document.querySelector('.score__subject')
+const scoreQLength = document.querySelector('#js-question-length')
+const quizScore = document.querySelector('#js-score')
+const playAgainBtn = document.querySelector('#play-again')
 const themeSwitcher = document.querySelector('#themeSwitcher')
 
 const body = document.body
@@ -41,29 +45,49 @@ scoreEl.style.display = 'none'
 
 document.title = `${quiz.title} Quiz`
 
-const iconContainerEl = document.createElement('div')
-const iconEl = document.createElement('img')
-const titleEl = document.createElement('h2')
+const createSubjectTitle = (parentEl) => {
+  const iconContainerEl = document.createElement('div')
+  const iconEl = document.createElement('img')
+  const titleEl = document.createElement('h2')
+
+  iconContainerEl.classList.add('icon-container')
+  iconContainerEl.classList.add(`icon__${title.toLowerCase()}`)
+
+  iconEl.setAttribute('src', icon)
+  iconEl.setAttribute('alt', title.toLowerCase())
+  iconContainerEl.append(iconEl)
+
+  titleEl.textContent = title
+
+  parentEl.append(iconContainerEl)
+  parentEl.append(titleEl)
+
+}
+
+
 const progress = document.createElement('progress')
+const choiceCorrect = document.createElement('span')
+const choiceIncorrect = document.createElement('span')
 
-iconContainerEl.classList.add('icon-container')
-iconContainerEl.classList.add(`icon__${title.toLowerCase()}`)
 
-iconEl.setAttribute('src', icon)
-iconEl.setAttribute('alt', title.toLowerCase())
+choiceCorrect.classList.add('correct-incorrect-icon')
+choiceIncorrect.classList.add('correct-incorrect-icon')
 
-iconContainerEl.append(iconEl)
+choiceCorrect.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40"><path fill="#26D782" d="M20 5a15 15 0 1 1 0 30 15 15 0 0 1 0-30Zm0 2.5a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25Zm-1.875 15.105L25.3 15.41a1.25 1.25 0 0 1 1.915 1.593l-.145.174-8.06 8.08a1.25 1.25 0 0 1-1.595.148l-.175-.145-4.375-4.375a1.25 1.25 0 0 1 1.595-1.913l.175.143 3.49 3.49Z"/></svg>`
+
+choiceIncorrect.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40"><path fill="#EE5454" d="M20 5a15 15 0 1 1 0 30 15 15 0 0 1 0-30Zm0 2.5a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25Zm-5.402 7.415.142-.175a1.25 1.25 0 0 1 1.595-.143l.175.143L20 18.233l3.49-3.493a1.25 1.25 0 0 1 1.595-.143l.175.143a1.25 1.25 0 0 1 .142 1.595l-.142.175L21.767 20l3.493 3.49a1.25 1.25 0 0 1 .142 1.595l-.142.175a1.25 1.25 0 0 1-1.595.142l-.175-.142L20 21.767l-3.49 3.493a1.25 1.25 0 0 1-1.595.142l-.175-.142a1.25 1.25 0 0 1-.143-1.595l.143-.175L18.233 20l-3.493-3.49a1.25 1.25 0 0 1-.143-1.595Z"/></svg>`
+
 
 progress.setAttribute('type', 'range')
 progress.setAttribute('name', 'progress')
 progress.setAttribute('max', '100')
 progress.setAttribute('id', 'quiz-progress')
 
+createSubjectTitle(questionTitle)
+createSubjectTitle(scoreSubject)
 
-titleEl.textContent = title
 
-questionTitle.append(iconContainerEl)
-questionTitle.append(titleEl)
+scoreQLength.textContent = questions.length
 
 let currentQuestionIdx = 0
 let startQuestion = questions[currentQuestionIdx]
@@ -85,19 +109,24 @@ const createChoiceButton = (question) => {
   question.options.forEach((option, index) => {
     const choicesItem = document.createElement('li')
     const choice = document.createElement('button')
+    const choiceColOne = document.createElement('div')
     const choiceLetter = document.createElement('span')
     const choiceOption = document.createElement('p')
     choicesItem.classList.add('choice')
     choiceLetter.classList.add('letter')
+    choiceColOne.classList.add('choice__col-one')
     choice.setAttribute('type', 'button')
 
+   
     choice.dataset.choice = option
     choiceLetter.textContent = letters[index]
     choiceOption.append(document.createTextNode(option))
 
-    choice.append(choiceLetter)
-    choice.append(choiceOption)
+    choiceColOne.append(choiceLetter)
+    choiceColOne.append(choiceOption)
 
+    choice.append(choiceColOne)
+  
     choicesItem.append(choice)
 
     choice.addEventListener('click', (e) => handleChoiceClick(e, choiceLetter))
@@ -126,13 +155,19 @@ createChoiceButton(startQuestion)
 
 nextBtn.addEventListener('click', (e) => {
   e.preventDefault()
-  displayUserScore(userScore, currentQuestionIdx)
+  
+  if (currentQuestionIdx + 1 === 10) {
+    quizEl.style.display = "none"
+    scoreEl.style.display = "block"
+    quizScore.textContent = userScore
+  }
 
   if(currentQuestionIdx < questions.length - 1) {
     currentQuestionIdx++
   }
 
-  progress.value = currentQuestionIdx * 10
+
+  progress.value = (currentQuestionIdx  + 1) * 10
 
   userAnswer.pop()
   questionLength.textContent = `Question ${currentQuestionIdx + 1} of ${questions.length}`
@@ -141,6 +176,7 @@ nextBtn.addEventListener('click', (e) => {
 
   nextBtn.style.display = 'none'
   submitBtn.style.display = 'block'
+
 })
 
 submitBtn.addEventListener('click', (e) => {
@@ -150,11 +186,14 @@ submitBtn.addEventListener('click', (e) => {
   }
 
   const {letter, answer } = userAnswer[0]
+  const choices = document.querySelectorAll('.choice')
   const selectedAnswer = answer.dataset.choice
+
   if(selectedAnswer === questions[currentQuestionIdx].answer) {
     answer.style.borderColor = "#26D782"
     letter.style.color = "#fff"
     letter.style.backgroundColor = "#26D782"
+    answer.append(choiceCorrect)
     userScore++
   }
   
@@ -162,15 +201,13 @@ submitBtn.addEventListener('click', (e) => {
     answer.style.borderColor = "#EE5454"
     letter.style.color = "#fff"
     letter.style.backgroundColor = "#EE5454"
+    answer.append(choiceIncorrect)
 
-    const choices = document.querySelectorAll('.choice')
+
     choices.forEach(choice => {
-      const letterEl = choice.querySelector('span')
       const buttonEl = choice.querySelector('button')
       if(buttonEl.dataset.choice === questions[currentQuestionIdx].answer) {
-        buttonEl.style.borderColor = "#26D782"
-        letterEl.style.color = "#fff"
-        letterEl.style.backgroundColor = "#26D782"
+          buttonEl.append(choiceCorrect)
       }
     })
   }
@@ -187,3 +224,8 @@ const displayUserScore = (score, index) => {
     scoreEl.textContent = score
   }
 }
+
+playAgainBtn.addEventListener("click", (e) => {
+  userScore = 0
+  userAnswer.pop()
+})

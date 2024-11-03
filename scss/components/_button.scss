@@ -60,11 +60,10 @@
   // }
 }
 
-
 .primary_btn {
   color: $white;
   background-color: $primary-clr;
-  margin-block-start: .75rem; 
+  margin-block-start: var(--step--2);
   border: none;
   border-radius: .75rem;
   padding-block: .75rem;
