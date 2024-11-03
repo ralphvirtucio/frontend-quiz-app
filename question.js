@@ -25,7 +25,6 @@ body.classList.add(`${savedTheme}-theme`);
 themeSwitcher.setAttribute("aria-label", `Switch to ${savedTheme === "light" ? "dark" : "light"} theme`)
 
 themeSwitcher.addEventListener("click", () => {
-  console.log('click')
   const isDark = body.classList.toggle('dark-theme')
   body.classList.toggle('light-theme', !isDark)
 

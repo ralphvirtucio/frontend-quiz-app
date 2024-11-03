@@ -261,7 +261,7 @@ body .primary-btn {
 .light-theme {
   background-color: #F4F6FA;
   color: #313E51;
-  background-image: url("/assets/images/pattern-background-mobile-light.svg");
+  background-image: url("./assets/images/pattern-background-mobile-light.svg");
 }
 .light-theme .switch svg path {
   fill: #626C7F;
@@ -293,19 +293,19 @@ body .primary-btn {
 }
 @media (min-width: 48em) {
   .light-theme {
-    background-image: url("/assets/images/pattern-background-tablet-light.svg");
+    background-image: url("./assets/images/pattern-background-tablet-light.svg");
   }
 }
 @media (min-width: 64em) {
   .light-theme {
-    background-image: url("/assets/images/pattern-background-desktop-light.svg");
+    background-image: url("./assets/images/pattern-background-desktop-light.svg");
   }
 }
 
 .dark-theme {
   background-color: #313E51;
   color: #fff;
-  background-image: url("/assets/images/pattern-background-mobile-dark.svg");
+  background-image: url("./assets/images/pattern-background-mobile-dark.svg");
 }
 .dark-theme .switch svg path {
   fill: #fff;
@@ -337,12 +337,12 @@ body .primary-btn {
 }
 @media (min-width: 48em) {
   .dark-theme {
-    background-image: url("/assets/images/pattern-background-tablet-dark.svg");
+    background-image: url("./assets/images/pattern-background-tablet-dark.svg");
   }
 }
 @media (min-width: 64em) {
   .dark-theme {
-    background-image: url("/assets/images/pattern-background-desktop-dark.svg");
+    background-image: url("./assets/images/pattern-background-desktop-dark.svg");
   }
 }
 .dark-theme .switch-thumb {
