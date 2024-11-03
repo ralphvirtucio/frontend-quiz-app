@@ -8,28 +8,28 @@ body {
 
 .light-theme {
   @include theme($light-theme-colors);
-  background-image: url('./assets/images/pattern-background-mobile-light.svg');
+  background-image: url('../../assets/images/pattern-background-mobile-light.svg');
 
   @include respond-to('small') {
-    background-image: url('./assets/images/pattern-background-tablet-light.svg');
+    background-image: url('../../assets/images/pattern-background-tablet-light.svg');
   }
 
   @include respond-to('medium') {
-    background-image: url('./assets/images/pattern-background-desktop-light.svg');
+    background-image: url('../../assets/images/pattern-background-desktop-light.svg');
   }
 
 }
 
 .dark-theme {
   @include theme($dark-theme-colors);
-  background-image: url('./assets/images/pattern-background-mobile-dark.svg');
+  background-image: url('../../assets/images/pattern-background-mobile-dark.svg');
 
   @include respond-to('small') {
-    background-image: url('./assets/images/pattern-background-tablet-dark.svg');
+    background-image: url('../../assets/images/pattern-background-tablet-dark.svg');
   }
 
   @include respond-to('medium') {
-    background-image: url('./assets/images/pattern-background-desktop-dark.svg');
+    background-image: url('../../assets/images/pattern-background-desktop-dark.svg');
   }
 
   .switch-thumb {
